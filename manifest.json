@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Naviance Printer",
+  "version": "1.0",
+  "description": "Fixes formatting issues when printing a survey in Naviance",
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content-script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
